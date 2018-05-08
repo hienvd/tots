@@ -1,41 +1,36 @@
 <div class="tots">
   <h1> TEAM OF THE SEASON | Fifa Mobile 18 </h1>
-  <p> * Bảng quy đổi điểm TOTS dành cho các anh em làm biếng tính 😎</p>
-  <p> * Chi tiết phần thưởng cho từng giải ở các tab bên cạnh!</p>
+  <p> 😎 Bảng quy đổi vouchers / điểm / phần thưởng trong TOTS</p>
+  <p> 😎 Chi tiết phần thưởng cho từng giải ở các tab bên cạnh!</p>
 
   <mat-tab-group>
     <mat-tab label="MAIN">
       <div class="main-container mat-elevation-z8">
         <table mat-table #table [dataSource]="dataSource">
-          <!-- index Column -->
-          <ng-container matColumnDef="index">
-            <th mat-header-cell *matHeaderCellDef> STT </th>
-            <td mat-cell *matCellDef="let element"> {{element.index}} </td>
-          </ng-container>
           <!-- Category Column -->
           <ng-container matColumnDef="cat">
             <th mat-header-cell *matHeaderCellDef> Giải đấu </th>
             <td mat-cell *matCellDef="let element"> {{element.cat}} </td>
           </ng-container>
-          <!-- POSition Column -->
-          <ng-container matColumnDef="pos">
-            <th mat-header-cell *matHeaderCellDef> Vị trí </th>
-            <td mat-cell *matCellDef="let element"> {{element.pos}} </td>
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Tên </th>
+            <td mat-cell *matCellDef="let element" class="bold"> {{element.name}} </td>
           </ng-container>
           <!-- OVR Column -->
           <ng-container matColumnDef="ovr">
             <th mat-header-cell *matHeaderCellDef> OVR </th>
-            <td mat-cell *matCellDef="let element"> {{element.ovr}} </td>
+            <td mat-cell *matCellDef="let element" class="bold"> {{element.ovr}} </td>
           </ng-container>
-          <!-- Name Column -->
-          <ng-container matColumnDef="name">
-            <th mat-header-cell *matHeaderCellDef> Cầu thủ </th>
-            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          <!-- POSition Column -->
+          <ng-container matColumnDef="pos">
+            <th mat-header-cell *matHeaderCellDef> Vị trí </th>
+            <td mat-cell *matCellDef="let element" class="bold"> {{element.pos}} </td>
           </ng-container>
           <!-- Points Column -->
           <ng-container matColumnDef="points">
             <th mat-header-cell *matHeaderCellDef> Điểm </th>
-            <td mat-cell *matCellDef="let element"> {{element.points}} </td>
+            <td mat-cell *matCellDef="let element" class="red"> {{element.points}} </td>
           </ng-container>
           <!-- Vouchers Column -->
           <ng-container matColumnDef="vouchers">
@@ -50,12 +45,12 @@
     </mat-tab>
 
     <mat-tab label="Community">
-      <div class="main-container mat-elevation-z8">
-        <table mat-table #table [dataSource]="comData">
+      <div class="main-container mat-elevation-z8" class="details-wrapper">
+        <table mat-table #table [dataSource]="comData" class="details">
           <!-- Name Column -->
           <ng-container matColumnDef="name">
             <th mat-header-cell *matHeaderCellDef> Cầu thủ </th>
-            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            <td mat-cell *matCellDef="let element" class="bold"> {{element.name}} </td>
           </ng-container>
           <!-- Category Column -->
           <ng-container matColumnDef="mainPoint">
@@ -110,12 +105,12 @@
     </mat-tab>
 
     <mat-tab label="EPL">
-      <div class="main-container mat-elevation-z8">
-        <table mat-table #table [dataSource]="eplData">
+      <div class="main-container mat-elevation-z8" class="details-wrapper">
+        <table mat-table #table [dataSource]="eplData" class="details">
           <!-- Name Column -->
           <ng-container matColumnDef="name">
             <th mat-header-cell *matHeaderCellDef> Cầu thủ </th>
-            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            <td mat-cell *matCellDef="let element" class="bold"> {{element.name}} </td>
           </ng-container>
           <!-- Category Column -->
           <ng-container matColumnDef="mainPoint">
@@ -170,14 +165,14 @@
     </mat-tab>
 
     <mat-tab label="La Liga">
-      Chưa có đâu, vui lòng quay lại sau!!!
+      <p> Chưa có đâu, quay lại sau nhé </p>
     </mat-tab>
   </mat-tab-group>
 
   <footer>
     <div class='credit'>
       <p>
-        Made with ❤️ by <a href='https://twitter.com/duchienvuong' target="_blank"> Hien Vuong </a> - Vietnam Hunters league!
+        Made with ❤️ by <a href='https://twitter.com/duchienvuong' target="_blank"> hivodo </a> - Vietnam Hunters league!
         <br/>
         Inspiration by <a href='https://www.reddit.com/user/B41Z3' target="_blank"> B41Z3 </a>
       </p>

@@ -6,11 +6,40 @@
 @include mat-core();
 
 body {
-  font-family: 'Roboto';
+  font-family: monospace;
   font-weight: normal;
   background-color: #f4f4f4;
 }
 
 h1, h2, h3, h4 {
   font-weight: normal;
+}
+
+table {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  thead {
+    th {
+      font-weight: bold;
+      color: black;
+    }
+  }
+  tr:nth-child(even) {
+    background-color: #f0f0f0;
+  }
+
+  td {
+    padding-left: 10px;
+    min-width: 50px;
+  }
+
+  td.red { color: red; font-weight: 500;}
+  td.bold { font-weight: 500;}
+}
+
+table.details {
+  td {
+    padding-left: 10px;
+    min-width: 100px;
+  }
 }

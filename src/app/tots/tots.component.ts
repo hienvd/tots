@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MatTableDataSource} from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -13,15 +14,21 @@ export class TotsComponent implements OnInit {
 
   //ALL DATA iS HERE :D
 
-  displayedColumns = ['index', 'cat', 'pos', 'ovr', 'name', 'points', 'vouchers'];
+  displayedColumns = ['cat', 'ovr', 'name', 'pos', 'points', 'vouchers'];
   comDisplayedColumns = ['name', 'mainPoint', 'branchPoint', 'mainCoin', 'mainTXP', 'mainSB', 'mainPlayers', 'branchCoin', 'branchTXP', 'branchSB'];
-  dataSource = ELEMENT_DATA;
+  dataSource = new MatTableDataSource(ELEMENT_DATA);
   comData = COM_DATA;
   eplData = EPL_DATA;
+
+  //TODO: later
+  applyFilter(filterValue: string) {
+    filterValue = filterValue.trim(); // Remove whitespace
+    filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
+    this.dataSource.filter = filterValue;
+  }
 }
 
 export interface Element {
-  index: number,
   cat: string,
   name: string;
   pos: string;
@@ -44,29 +51,29 @@ export interface DetailedElement {
 
 const ELEMENT_DATA: Element[] = [
   //Community
-  {index: 1, cat: 'Community', pos: 'CM', ovr: 86, name: 'Rabiot', points: 22},
-  {index: 2, cat: 'Community', pos: 'CDM', ovr: 86, name: 'Fabinho', points: 24},
-  {index: 3, cat: 'Community', pos: 'LM', ovr: 87, name: 'Lemar', points: 31},
-  {index: 4, cat: 'Community', pos: 'CB', ovr: 87, name: 'Sule', points: 35},
-  {index: 5, cat: 'Community', pos: 'CDM', ovr: 88, name: 'Javi Martinez', points: 40},
-  {index: 6, cat: 'Community', pos: 'ST', ovr: 88, name: 'Vardy', points: 44},
-  {index: 7, cat: 'Community', pos: 'CB', ovr: 90, name: 'Pique', points: 74},
-  {index: 8, cat: 'Community', pos: 'CF', ovr: 90, name: 'Giovinco', points: 86},
-  {index: 9, cat: 'Community', pos: 'CB', ovr: 91, name: 'Chiellini', points: 119},
-  {index: 10, cat: 'Community', pos: 'GK', ovr: 91, name: 'Oblak', points: 144},
-  {index: 11, cat: 'Community', pos: 'CM', ovr: 91, name: 'Hamsik', points: 189},
+  {cat: 'Community', pos: 'CM', ovr: 86, name: 'Rabiot', points: 22},
+  {cat: 'Community', pos: 'CDM', ovr: 86, name: 'Fabinho', points: 24},
+  {cat: 'Community', pos: 'LM', ovr: 87, name: 'Lemar', points: 31},
+  {cat: 'Community', pos: 'CB', ovr: 87, name: 'Sule', points: 35},
+  {cat: 'Community', pos: 'CDM', ovr: 88, name: 'Javi Martinez', points: 40},
+  {cat: 'Community', pos: 'ST', ovr: 88, name: 'Vardy', points: 44},
+  {cat: 'Community', pos: 'CB', ovr: 90, name: 'Pique', points: 74},
+  {cat: 'Community', pos: 'CF', ovr: 90, name: 'Giovinco', points: 86},
+  {cat: 'Community', pos: 'CB', ovr: 91, name: 'Chiellini', points: 119},
+  {cat: 'Community', pos: 'GK', ovr: 91, name: 'Oblak', points: 144},
+  {cat: 'Community', pos: 'CM', ovr: 91, name: 'Hamsik', points: 189},
   //EPL
-  {index: 1, cat: 'EPL', pos: 'CB', ovr: 87, name: 'Vertonghen', points: 27},
-  {index: 2, cat: 'EPL', pos: 'RB', ovr: 87, name: 'Walker', points: 29},
-  {index: 3, cat: 'EPL', pos: 'CDM', ovr: 88, name: 'Fernandinho', points: 31},
-  {index: 4, cat: 'EPL', pos: 'CAM', ovr: 89, name: 'Eriksen', points: 40},
-  {index: 5, cat: 'EPL', pos: 'CM', ovr: 89, name: 'David Silva', points: 45},
-  {index: 6, cat: 'EPL', pos: 'CB', ovr: 90, name: 'Otamendi', points: 64},
-  {index: 7, cat: 'EPL', pos: 'ST', ovr: 92, name: 'Kane', points: 109},
-  {index: 8, cat: 'EPL', pos: 'ST', ovr: 92, name: 'Aguero', points: 121},
-  {index: 9, cat: 'EPL', pos: 'CM', ovr: 93, name: 'De Bruyne', points: 179},
-  {index: 10, cat: 'EPL', pos: 'GK', ovr: 93, name: 'De Gea', points: 204},
-  {index: 11, cat: 'EPL', pos: 'RW', ovr: 95, name: 'Salah', points: 329},
+  {cat: 'EPL', pos: 'CB', ovr: 87, name: 'Vertonghen', points: 27},
+  {cat: 'EPL', pos: 'RB', ovr: 87, name: 'Walker', points: 29},
+  {cat: 'EPL', pos: 'CDM', ovr: 88, name: 'Fernandinho', points: 31},
+  {cat: 'EPL', pos: 'CAM', ovr: 89, name: 'Eriksen', points: 40},
+  {cat: 'EPL', pos: 'CM', ovr: 89, name: 'David Silva', points: 45},
+  {cat: 'EPL', pos: 'CB', ovr: 90, name: 'Otamendi', points: 64},
+  {cat: 'EPL', pos: 'ST', ovr: 92, name: 'Kane', points: 109},
+  {cat: 'EPL', pos: 'ST', ovr: 92, name: 'Aguero', points: 121},
+  {cat: 'EPL', pos: 'CM', ovr: 93, name: 'De Bruyne', points: 179},
+  {cat: 'EPL', pos: 'GK', ovr: 93, name: 'De Gea', points: 204},
+  {cat: 'EPL', pos: 'RW', ovr: 95, name: 'Salah', points: 329},
 ];
 
 const COM_DATA: DetailedElement[] = [
