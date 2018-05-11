@@ -33,8 +33,11 @@ table {
     min-width: 50px;
   }
 
-  td.red { color: red; font-weight: 500;}
-  td.bold { font-weight: 500;}
+  td.red { color: red; font-weight: 500; }
+  td.bold { font-weight: 500; }
+  td.wide { min-width: 100px; }
+
+  tr.mat-header-row {background: rgba(209,196,233,.3);}
 }
 
 table.details {

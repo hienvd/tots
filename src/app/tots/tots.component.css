@@ -17,6 +17,8 @@
   overflow: auto;
 }
 
+.red { color: red; }
+
 footer {
   text-align: center;
 }
