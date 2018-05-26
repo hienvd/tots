@@ -47,6 +47,141 @@
       </div>
     </mat-tab>
 
+    <mat-tab label="Ligue 1">
+      <div class="main-container mat-elevation-z8" class="details-wrapper">
+        <table mat-table #table [dataSource]="ligue1Data" class="details">
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element" class="bold"> {{element.name}} </td>
+          </ng-container>
+          <!-- Category Column -->
+          <ng-container matColumnDef="mainPoint">
+            <th mat-header-cell *matHeaderCellDef> Main point </th>
+            <td mat-cell *matCellDef="let element"> {{element.mainPoint}} </td>
+          </ng-container>
+          <!-- POSition Column -->
+          <ng-container matColumnDef="branchPoint">
+            <th mat-header-cell *matHeaderCellDef> Branch point </th>
+            <td mat-cell *matCellDef="let element"> {{element.branchPoint}} </td>
+          </ng-container>
+          <!-- OVR Column -->
+          <ng-container matColumnDef="coin">
+            <th mat-header-cell *matHeaderCellDef> Coins </th>
+            <td mat-cell *matCellDef="let element"> {{element.coin | number}} </td>
+          </ng-container>
+          <!-- Name Column -->
+          <ng-container matColumnDef="txp">
+            <th mat-header-cell *matHeaderCellDef> TXP </th>
+            <td mat-cell *matCellDef="let element"> {{element.txp | number}} </td>
+          </ng-container>
+          <!-- Name Column -->
+          <ng-container matColumnDef="sb">
+            <th mat-header-cell *matHeaderCellDef> SB </th>
+            <td mat-cell *matCellDef="let element"> {{element.sb | number}} </td>
+          </ng-container>
+          <!-- Points Column -->
+          <ng-container matColumnDef="numPlayers">
+            <th mat-header-cell *matHeaderCellDef> No players </th>
+            <td mat-cell *matCellDef="let element"> {{element.numPlayers}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="comDisplayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: comDisplayedColumns;"></tr>
+        </table>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Calcio A">
+      <div class="main-container mat-elevation-z8" class="details-wrapper">
+        <table mat-table #table [dataSource]="calcioData" class="details">
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element" class="bold"> {{element.name}} </td>
+          </ng-container>
+          <!-- Category Column -->
+          <ng-container matColumnDef="mainPoint">
+            <th mat-header-cell *matHeaderCellDef> Main point </th>
+            <td mat-cell *matCellDef="let element"> {{element.mainPoint}} </td>
+          </ng-container>
+          <!-- POSition Column -->
+          <ng-container matColumnDef="branchPoint">
+            <th mat-header-cell *matHeaderCellDef> Branch point </th>
+            <td mat-cell *matCellDef="let element"> {{element.branchPoint}} </td>
+          </ng-container>
+          <!-- OVR Column -->
+          <ng-container matColumnDef="coin">
+            <th mat-header-cell *matHeaderCellDef> Coins </th>
+            <td mat-cell *matCellDef="let element"> {{element.coin | number}} </td>
+          </ng-container>
+          <!-- Name Column -->
+          <ng-container matColumnDef="txp">
+            <th mat-header-cell *matHeaderCellDef> TXP </th>
+            <td mat-cell *matCellDef="let element"> {{element.txp | number}} </td>
+          </ng-container>
+          <!-- Name Column -->
+          <ng-container matColumnDef="sb">
+            <th mat-header-cell *matHeaderCellDef> SB </th>
+            <td mat-cell *matCellDef="let element"> {{element.sb | number}} </td>
+          </ng-container>
+          <!-- Points Column -->
+          <ng-container matColumnDef="numPlayers">
+            <th mat-header-cell *matHeaderCellDef> No players </th>
+            <td mat-cell *matCellDef="let element"> {{element.numPlayers}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="comDisplayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: comDisplayedColumns;"></tr>
+        </table>
+      </div>
+    </mat-tab>
+
+    <mat-tab label="Bundesliga">
+      <div class="main-container mat-elevation-z8" class="details-wrapper">
+        <table mat-table #table [dataSource]="bundesData" class="details">
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element" class="bold"> {{element.name}} </td>
+          </ng-container>
+          <!-- Category Column -->
+          <ng-container matColumnDef="mainPoint">
+            <th mat-header-cell *matHeaderCellDef> Main point </th>
+            <td mat-cell *matCellDef="let element"> {{element.mainPoint}} </td>
+          </ng-container>
+          <!-- POSition Column -->
+          <ng-container matColumnDef="branchPoint">
+            <th mat-header-cell *matHeaderCellDef> Branch point </th>
+            <td mat-cell *matCellDef="let element"> {{element.branchPoint}} </td>
+          </ng-container>
+          <!-- OVR Column -->
+          <ng-container matColumnDef="coin">
+            <th mat-header-cell *matHeaderCellDef> Coins </th>
+            <td mat-cell *matCellDef="let element"> {{element.coin | number}} </td>
+          </ng-container>
+          <!-- Name Column -->
+          <ng-container matColumnDef="txp">
+            <th mat-header-cell *matHeaderCellDef> TXP </th>
+            <td mat-cell *matCellDef="let element"> {{element.txp | number}} </td>
+          </ng-container>
+          <!-- Name Column -->
+          <ng-container matColumnDef="sb">
+            <th mat-header-cell *matHeaderCellDef> SB </th>
+            <td mat-cell *matCellDef="let element"> {{element.sb | number}} </td>
+          </ng-container>
+          <!-- Points Column -->
+          <ng-container matColumnDef="numPlayers">
+            <th mat-header-cell *matHeaderCellDef> No players </th>
+            <td mat-cell *matCellDef="let element"> {{element.numPlayers}} </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="comDisplayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: comDisplayedColumns;"></tr>
+        </table>
+      </div>
+    </mat-tab>
+
     <mat-tab label="La Liga">
       <div class="main-container mat-elevation-z8" class="details-wrapper">
         <table mat-table #table [dataSource]="laLigaData" class="details">
@@ -66,39 +201,24 @@
             <td mat-cell *matCellDef="let element"> {{element.branchPoint}} </td>
           </ng-container>
           <!-- OVR Column -->
-          <ng-container matColumnDef="mainCoin">
+          <ng-container matColumnDef="coin">
             <th mat-header-cell *matHeaderCellDef> Coins </th>
-            <td mat-cell *matCellDef="let element"> {{element.mainCoin | number}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.coin | number}} </td>
           </ng-container>
           <!-- Name Column -->
-          <ng-container matColumnDef="mainTXP">
+          <ng-container matColumnDef="txp">
             <th mat-header-cell *matHeaderCellDef> TXP </th>
-            <td mat-cell *matCellDef="let element"> {{element.mainTXP | number}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.txp | number}} </td>
           </ng-container>
           <!-- Name Column -->
-          <ng-container matColumnDef="mainSB">
+          <ng-container matColumnDef="sb">
             <th mat-header-cell *matHeaderCellDef> SB </th>
-            <td mat-cell *matCellDef="let element"> {{element.mainSB | number}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.sb | number}} </td>
           </ng-container>
           <!-- Points Column -->
-          <ng-container matColumnDef="mainPlayers">
+          <ng-container matColumnDef="numPlayers">
             <th mat-header-cell *matHeaderCellDef> No players </th>
-            <td mat-cell *matCellDef="let element"> {{element.mainPlayers}} </td>
-          </ng-container>
-          <!-- Vouchers Column -->
-          <ng-container matColumnDef="branchCoin">
-            <th mat-header-cell *matHeaderCellDef> Branch Coins </th>
-            <td mat-cell *matCellDef="let element"> {{element.branchCoin | number}} </td>
-          </ng-container>
-          <!-- Vouchers Column -->
-          <ng-container matColumnDef="branchTXP">
-            <th mat-header-cell *matHeaderCellDef> Branch TXP </th>
-            <td mat-cell *matCellDef="let element"> {{element.branchTXP | number}} </td>
-          </ng-container>
-          <!-- Vouchers Column -->
-          <ng-container matColumnDef="branchSB">
-            <th mat-header-cell *matHeaderCellDef> Branch SB </th>
-            <td mat-cell *matCellDef="let element"> {{element.branchSB | number}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.numPlayers}} </td>
           </ng-container>
 
           <tr mat-header-row *matHeaderRowDef="comDisplayedColumns"></tr>
@@ -126,24 +246,24 @@
             <td mat-cell *matCellDef="let element"> {{element.branchPoint}} </td>
           </ng-container>
           <!-- OVR Column -->
-          <ng-container matColumnDef="mainCoin">
+          <ng-container matColumnDef="coin">
             <th mat-header-cell *matHeaderCellDef> Coins </th>
-            <td mat-cell *matCellDef="let element"> {{element.mainCoin | number}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.coin | number}} </td>
           </ng-container>
           <!-- Name Column -->
-          <ng-container matColumnDef="mainTXP">
+          <ng-container matColumnDef="txp">
             <th mat-header-cell *matHeaderCellDef> TXP </th>
-            <td mat-cell *matCellDef="let element"> {{element.mainTXP | number}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.txp | number}} </td>
           </ng-container>
           <!-- Name Column -->
-          <ng-container matColumnDef="mainSB">
+          <ng-container matColumnDef="sb">
             <th mat-header-cell *matHeaderCellDef> SB </th>
-            <td mat-cell *matCellDef="let element"> {{element.mainSB | number}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.sb | number}} </td>
           </ng-container>
           <!-- Points Column -->
-          <ng-container matColumnDef="mainPlayers">
+          <ng-container matColumnDef="numPlayers">
             <th mat-header-cell *matHeaderCellDef> No players </th>
-            <td mat-cell *matCellDef="let element"> {{element.mainPlayers}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.numPlayers}} </td>
           </ng-container>
           <!-- Vouchers Column -->
           <ng-container matColumnDef="branchCoin">
@@ -186,24 +306,24 @@
             <td mat-cell *matCellDef="let element"> {{element.branchPoint}} </td>
           </ng-container>
           <!-- OVR Column -->
-          <ng-container matColumnDef="mainCoin">
+          <ng-container matColumnDef="coin">
             <th mat-header-cell *matHeaderCellDef> Coins </th>
-            <td mat-cell *matCellDef="let element"> {{element.mainCoin | number}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.coin | number}} </td>
           </ng-container>
           <!-- Name Column -->
-          <ng-container matColumnDef="mainTXP">
+          <ng-container matColumnDef="txp">
             <th mat-header-cell *matHeaderCellDef> TXP </th>
-            <td mat-cell *matCellDef="let element"> {{element.mainTXP | number}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.txp | number}} </td>
           </ng-container>
           <!-- Name Column -->
-          <ng-container matColumnDef="mainSB">
+          <ng-container matColumnDef="sb">
             <th mat-header-cell *matHeaderCellDef> SB </th>
-            <td mat-cell *matCellDef="let element"> {{element.mainSB | number}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.sb | number}} </td>
           </ng-container>
           <!-- Points Column -->
-          <ng-container matColumnDef="mainPlayers">
+          <ng-container matColumnDef="numPlayers">
             <th mat-header-cell *matHeaderCellDef> No players </th>
-            <td mat-cell *matCellDef="let element"> {{element.mainPlayers}} </td>
+            <td mat-cell *matCellDef="let element"> {{element.numPlayers}} </td>
           </ng-container>
           <!-- Vouchers Column -->
           <ng-container matColumnDef="branchCoin">
@@ -233,8 +353,6 @@
     <div class='credit'>
       <p>
         Made with ❤️ by <a href='https://twitter.com/duchienvuong' target="_blank"> hivodo </a> - Vietnam Hunters league!
-        <br/>
-        Inspiration by <a href='https://www.reddit.com/user/B41Z3' target="_blank"> B41Z3 </a>
       </p>
     </div>
   </footer>
